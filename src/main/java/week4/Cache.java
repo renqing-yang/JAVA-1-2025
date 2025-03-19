@@ -25,7 +25,7 @@ package week4;
  *
  *  Wed + Thursday
  *  1. rest api
- *  2. spring boot 
+ *  2. spring boot
  *
  *  Friday
  *  1. Rest api security
