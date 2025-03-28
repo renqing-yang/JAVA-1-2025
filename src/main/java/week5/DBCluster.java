@@ -6,6 +6,11 @@ package week5;
  *      Availability
  *      Partition Tolerance
  *
+ * BASE
+ *      Basic Availability
+ *      Soft Stage
+ *      Eventually Consistency
+ * * * * * * * * * * * * * * * * *
  * Single Leader DB
  * write -> Leader / Master / Primary  (single instance)
  *
@@ -72,7 +77,25 @@ package week5;
  *
  *   read -> mem table(memory) -> blooming filter -> SSTables -> merge them -> return result
  *
+ *    * *    * *    * *    * *    * *    * *    * *    * *    * *    * *    * *    * *    * *    *
+ *    mongodb
+ *                      |
+ *                  Mongos(Gateway)  -   Mongos(Config server)
+ *          /           |            \
+ *       sharding       sharding        sharding
+ *       primary
+ *       second
+ *       second
+ *       second
  *
+ *
+ *
+ *  key: sharding location 1, 2, 3
+ *
+ * *    * *    * *    * *    * *    * *    * *    * *    * *    * *    * *    * *    * *    * *    *
+ * Elastic search
+ * inverted index
+ *    * *    * *    * *    * *    * *    * *    * *    * *    * *    * *    * *    * *    * *    *
  * Question:
  * 1. what is CAP
  * 2. how to do DB cluster
